@@ -1,4 +1,5 @@
 <h2><strong>Maze Generation &amp; Pathfinding Visualizer</strong></h2>
+https://youtu.be/lAmczXvP200<p><p>
 <p><strong>How to use</strong>: Choose a&nbsp;Maze Generation algorithm from, then choose a Pathfinding algorithm.</p>
 <p>You can set the speed of the visualization by the Slider on the top center of the window.</p>
 <p>You can set the size of the board with the Dropdown on the top left of the window</p>
