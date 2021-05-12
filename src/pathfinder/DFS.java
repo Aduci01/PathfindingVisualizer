@@ -37,11 +37,15 @@ public class DFS extends PathFinder {
     boolean RecursiveDFS(Cell[][] cells, Cell current, Cell target){
         if (current == target) return true;
         current.isVisited = true;
+        SetCellColorByDistance(current, current.helperNum);
+
+        Tools.Delay();
 
         for (Cell c: GetVisitedNeighbours(current, cells, false)) {
             if (c.GetCellType() == Cell.CellType.WALL) continue;;
 
             c.parentCell = current;
+            c.helperNum = current.helperNum + 1;
 
             if (RecursiveDFS(cells, c, target)) return true;
         }
