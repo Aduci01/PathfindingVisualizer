@@ -14,6 +14,6 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
-    IP=($(curl -s http://ipinfo.io/json))
+                    IP=($(curl -s http://ipinfo.io/json | jq '.hostname' | sed -e 's/^"//' -e 's/"$//'))
                     echo "This Microsoft hosted agent public IP is: $IP"
   displayName: 'Run a multi-line script'
