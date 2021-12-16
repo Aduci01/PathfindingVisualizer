@@ -10,10 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
 - script: |
-                    IP=($(curl -s http://ipinfo.io/json | jq '.hostname'))
+                    IP=($(curl -s http://ipinfo.io/json | jq '.ip'))
                     echo "This Microsoft hosted agent public IP is: $IP"
-  displayName: 'Run a multi-line script'
+  displayName: 'IP Check'
